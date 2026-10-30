@@ -1,13 +1,6 @@
-#! /usr/bin/bash
-set -e
+#!/bin/bash
+set -eo pipefail
 
-mkdir -p build
-cd build
-
-cmake .. \
-  -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
-  -DCMAKE_BUILD_TYPE=Release
-
-NPROC=$(nproc 2>/dev/null || sysctl -n hw.ncpu)
-make -j"$NPROC"
-make install
+cmake ${CMAKE_ARGS} -S . -B build -DCMAKE_INSTALL_PREFIX="${PREFIX}"
+cmake --build build --parallel "${CPU_COUNT}"
+cmake --install build
