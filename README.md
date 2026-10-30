@@ -9,11 +9,16 @@ Feedstock for [scirooplot](https://github.com/SciRooPlot/SciRooPlot) — part of
 Builds linux-amd64 + linux-arm64 in one matrix workflow and uploads to the
 [hep-forge](https://anaconda.org/hep-forge) Anaconda channel.
 
-Command-line plotting app for scientific data with ROOT
+Command-line plotting app to manage and visualize scientific data with ROOT
 
 ## Architectures
 
-State per architecture: see the platforms badge above or [anaconda.org/hep-forge/scirooplot](https://anaconda.org/hep-forge/scirooplot).
+| Architecture | Latest published |
+|--------------|------------------|
+| linux-amd64 (`linux-64`) | ✅ `3.3.3` |
+| linux-arm64 (`linux-aarch64`) | ✅ `3.3.3` |
+
+_As of the last feedstock render; the badges above are live._
 
 
 ## Install
