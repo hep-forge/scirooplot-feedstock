@@ -38,12 +38,10 @@ requirements:
     - pybind11
     - fmt
     - libboost-devel
-    - root {{ root }}.*
-    - root-guard
+    - root_base {{ root }}.* cxx{{ root_cxx_standard }}*
   run:
     - python
-    - root {{ root }}.*
-    - root-guard
+    - {{ pin_compatible('root_base', exact=True) }}
 
 test:
   imports:
